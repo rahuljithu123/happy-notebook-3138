@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+        #cart_page{
+            /* border: 1px solid rebeccapurple; */
+            margin-top: 20px;
+        }
+        /* shopping bag */
+        #cart_page{
+            /* border: 1px solid red; */
+            padding-left: 250px;
+        }
+        #help{
+            text-align: center;
+        }
+        #shopping_bag_cont{
+            /* border: 1px solid red; */
+            width: 50%;
+            height: 160px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        h4{
+            text-align: center;
+            margin-top: 40px;
+            color: rgb(78, 64, 64);
+        }
+        #bag_count{
+            margin-top: 20px;
+            color: grey;
+        }
+        #shopping_bag{
+            
+
+            display: flex;
+            gap: 10px;
+            margin-left: 10px;
+        }
+        /* saved for later */
+       #later_cont{
+        /* border: 1px solid rebeccapurple; */
+        width: 50%;
+        height: 160px;
+        margin-top: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+       }
+       #later_count{
+            margin-top: 20px;
+            color: grey;
+        }
+        #save_for_later{
+            display: flex;
+            gap: 10px;
+            margin-left: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="slide"></div>
+    <div id="cart_page">
+        <div id="shopping_bag_cont">
+            <div id="shopping_bag">
+                <h3>SHOPPING BAG</h3>
+                <p id="bag_count">0</p>
+            </div>
+            <hr>
+            <!-- <h4>Your Shopping Bag is empty.</h4> -->
+            <div id="bag_prod"></div>
+        </div>
+        <div id="later_cont">
+        <div id="save_for_later">
+            <h3>SAVED FOR LATER</h3>
+            <p id="later_count">0</p>
+        </div>
+        <hr>
+        <h4>Your Saved for Later is empty.</h4>
+        </div>
+    </div>
+</body>
+</html>
+<script src="cart.js" type="module"></script>
