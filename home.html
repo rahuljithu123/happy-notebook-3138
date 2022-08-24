@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #containerh{
+        display:grid;
+        justify-content: center;
+        grid-template-columns: repeat(3,350px);
+        row-gap: 20px;
+    }
+    #containerh>div{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width:300px;
+        margin-left: 20px;
+    }
+    img{
+        height:300px;
+        width:300px;
+    }
+</style>
+<body>
+    <div id="containerh"></div>
+</body>
+</html>
+<script src="./home.js"></script>
