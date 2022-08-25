@@ -99,3 +99,173 @@ body {
   height: 100%;
   width: 100%;
 }
+/* .....................................list--6 ....................................*/
+
+#main {
+  border: 1px solid red;
+  width: 70%;
+  margin: auto;
+}
+#list {
+  margin: auto;
+}
+
+#box1 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+#box1 img {
+  width: 100%;
+}
+#box2 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+#box2 img {
+  width: 100%;
+}
+#box3 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+#box3 img {
+  width: 100%;
+}
+#newfall {
+  position: relative;
+}
+#text1 {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  line-height: 0.3;
+}
+#t_child1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t_child2 {
+  font-size: 20px;
+}
+#t_child3 {
+  font-size: 15px;
+}
+#classic {
+  position: relative;
+}
+#text2 {
+  width: 100%;
+  position: absolute;
+  top: 75%;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  line-height: 0.2;
+}
+#t2_child1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t2_child2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t2_child3 {
+  font-size: 15px;
+}
+/* .......................................................................................................... */
+#fresh {
+  position: relative;
+}
+#text3 {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  line-height: 0.3;
+}
+#t3_child1 {
+  font-size: 30px;
+}
+/* .......... */
+#Sweater {
+  position: relative;
+}
+#text4 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  color: white;
+  line-height: 0.2;
+}
+#t4_child1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t4_child2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+/* ................................................................................................... */
+
+#pant {
+  position: relative;
+}
+#text5 {
+  width: 100%;
+  position: absolute;
+  top: 1%;
+  text-align: center;
+  color: white;
+  line-height: 0.1;
+  color: black;
+}
+#t5_child1 {
+  font-size: 20px;
+}
+#t5_child2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t5_child3 {
+  font-size: 15px;
+  font-weight: 400;
+}
+#t5_child4 {
+  font-size: 12px;
+  font-weight: bold;
+}
+/* ...................................................... */
+#ballet {
+  position: relative;
+}
+#text6 {
+  width: 100%;
+  position: absolute;
+  top: 75%;
+  text-align: center;
+  color: white;
+  line-height: 0.1;
+  color: black;
+}
+#t6_child1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+#t6_child2 {
+  font-size: 40px;
+  font-weight: 400;
+}
