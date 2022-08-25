@@ -9,11 +9,41 @@
         #help{
             text-align: center;
         }
+        #sale{
+            text-align: center;
+        }
+        #filter{
+            margin-left: 14px;
+        }
+        #filter,#sort{
+            background-color: white;
+           border-color: grey;
+        }
+        #sort{
+            margin-left: 10px;
+        }
+        #prod_cont{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        /* .prod{
+            border: 1px solid red;
+        } */
+        #prod_cont>.prod>img{
+            display: block;
+            margin: auto;
+            width: 95%;
+            margin-top: 40px;
+        }
+       p,h4{
+        text-align: center;
+
+       }
     </style>
 </head>
 <body>
     <div id="slide"></div>
-    <h1>SALE</h1>
+    <h1 id="sale">SALE</h1>
     <button id="filter">Filters: Price < 2000</button>
     <button id="sort">Price: Low - High</button>
     <div id="prod_cont"></div>

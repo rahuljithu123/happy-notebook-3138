@@ -88,8 +88,11 @@ let append_prod = (data) => {
     let img = document.createElement("img");
     img.src = el.img;
     let title = document.createElement("p");
+    //title.setAttribute("id", title);
     title.innerText = el.title;
+
     let price = document.createElement("h4");
+    //price.setAttribute("id", "price");
     price.innerText = `INR ${el.price}`;
     let box = document.createElement("div");
 
@@ -120,9 +123,9 @@ document.getElementById("filter").addEventListener("click", () => {
 });
 
 //SORT
-document.getElementById('sort').addEventListener('click', () => {
-    let sort_price = arr_of_prod.sort((a, b) => {
-        re
-    })
-})
-
+document.getElementById("sort").addEventListener("click", () => {
+  let sort_price = arr_of_prod.sort((a, b) => {
+    return a.price - b.price;
+  });
+  append_prod(sort_price);
+});

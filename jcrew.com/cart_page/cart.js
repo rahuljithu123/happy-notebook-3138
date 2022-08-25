@@ -10,6 +10,7 @@ let append_prod = (data) => {
 
   data.forEach((el, index) => {
     let img_div = document.createElement("div");
+    img_div.setAttribute('class', 'img_div');
     let img = document.createElement("img");
     img.src = el.img;
     img_div.append(img);
@@ -20,11 +21,13 @@ let append_prod = (data) => {
 
     let button = document.createElement("button");
     button.innerText = "Remove";
+    button.setAttribute('id', 'remove');
     button.addEventListener("click", () => {
       removeProd(index);
     });
     let saveLater = document.createElement("button");
     saveLater.innerText = "Save for Later";
+    saveLater.setAttribute('id', 'saveLater');
 
     des_div.append(title, button, saveLater);
 
