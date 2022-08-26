@@ -65,6 +65,7 @@ input[type="submit"] {
     font-weight: bold;
 }
 
-#teRP label {
+#teRP label a {
     color: #0087fe;
+    text-decoration: none;
 }
