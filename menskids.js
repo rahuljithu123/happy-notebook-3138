@@ -161,57 +161,7 @@ let mensdata = [
     hoverUrl:"https://www.jcrew.com/s7-img-facade/BJ349_PP3479_d1?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540"
   },
 ];
-// document.querySelector("#featured").addEventListener("change", function () {
-//   sortit(document.querySelector("#featured").value, mensdata);
-// });
-// /* filtred run program */
-// function sortit(getvalue, mensdata) {
-//   if (getvalue == "Alpha") {
-//     sortbyAZ(mensdata);
-//   } else if (getvalue == "rev Alpha") {
-//     sortbyZA(mensdata);
-//   } else if (getvalue == "LH") {
-//     sortbyLH(mensdata);
-//   } else if (getvalue == "HL") {
-//     sortbyHL(mensdata);
-//   }
-// }
 
-// /* Sorting Functions */
-// /* Alphabatic */
-// function sortbyAZ(mensdata) {
-//   let sort = mensdata.sort(function (a, b) {
-//     if (a.title > b.title) return 1;
-//     if (a.title < b.title) return -1;
-//     return 0;
-//   });
-//   appenddata(sort);
-//   console.log(sort);
-// }
-// function sortbyZA(mensdata) {
-//   let sort = mensdata.sort(function (a, b) {
-//     if (a.title > b.title) return -1;
-//     if (a.title < b.title) return 1;
-//     return 0;
-//   });
-//   appenddata(sort);
-//   console.log(sort);
-// }
-// /* Price based */
-// function sortbyLH(mensdata) {
-//   let sort = mensdata.sort(function (a, b) {
-//     return a.price - b.price;
-//   });
-//   appenddata(sort);
-//   console.log(sort);
-// }
-// function sortbyHL(mensdata) {
-//   let sort = mensdata.sort(function (a, b) {
-//     return b.price - a.price;
-//   });
-//   appenddata(sort);
-//   console.log(sort);
-// }
 
 
 let cart = JSON.parse(localStorage.getItem("cartData")) || [];
