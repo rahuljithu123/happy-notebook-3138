@@ -4,83 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
     <title>Document</title>
     <style>
         #wproducts{
             display:grid;
             justify-content: center;
             grid-template-columns: repeat(3,350px);
-            row-gap: 20px;
+            row-gap: 10px;
+            margin-top: 20px;
         }
         #wproducts>div{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             width:300px;
             margin-left: 20px;
+            margin-top: 60px;
+            margin-bottom: 20px;
         }
         #wproducts>div>img{
             height:300px;
             width:300px;
         }
+        #showFilters2{
+          margin-top: 90px;
+          margin-left: 250px;
+        }
     </style>
 </head>
 <body>
+  <div id="nav"></div>
+    <select name="showFilters" id="showFilters2">
+        <option value="Show Filters">Show Filters</option>
+        <option value="Filters: Price < 30000">Filters: Price < 30000</option>
+        <option value="Filters: Price > 30000">Filters: Price > 30000</option>
+      </select>
+      <select name="featured" id="featured2">
+        <option value="Featured">Featured</option>
+        <option value="LTH">Price: Low - High</option>
+        <option value="HTL">Price: High - Low</option>
+      </select>
     <div id="wproducts"></div>
+    <div id="footer"></div>
 </body>
 </html>
-<script>
-    let productDataw=[
-{ img:"https://www.jcrew.com/s7-img-facade/BJ571_NA6157_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-title:"Ruffleneck merino wool sweater",
-price:8614},
-{  img:"https://www.jcrew.com/s7-img-facade/BJ987_BL7755_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-title:"Louisa lady jacket in maritime tweed",
-price:37127},
-{  img:"https://www.jcrew.com/s7-img-facade/BF013_NA7183_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-title:"Cecile relaxed sweater-blazer",
-price:22436
-},
-{ img:"https://www.jcrew.com/s7-img-facade/BA400_GR7105_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-title:"Cashmere classic-fit crewneck sweater",
-price:17095
-},
-{  img:"https://www.jcrew.com/s7-img-facade/AS297_BL7755_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-title:"Vintage cotton crewneck long-sleeve T-shirt",
-price:3005
-},
-{  img:"https://www.jcrew.com/s7-img-facade/BJ930_WY9641_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-title:" Leighton blazer-jacket in double-faced wool",
-price:35791
-},
-{ img:"https://www.jcrew.com/s7-img-facade/BA551_SU7517_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-title:"Cocoon sweater-blazer",
-price:23772
-},
-{  img:"https://www.jcrew.com/s7-img-facade/BK266_WZ2457_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-title:"Willa cropped flare pant in Italian city wool",
-price:26443
-},
-{  img:"https://www.jcrew.com/s7-img-facade/BK668_BL7505_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540",
-title:" New quilted cocoon puffer coat",
-price:22436
-},]
 
-displayw(productDataw);
-function displayw(productDataw){
-    document.querySelector("#wproducts").innerHTML = "";
-    productDataw.forEach(function (elem){
-    let div = document.createElement("div");
-    let img = document.createElement("img");
-    img.setAttribute("src",elem.img);
-    let name = document.createElement("h5");
-    name.innerText = elem.title
-    let price = document.createElement("h4");
 
+<script type="module">
+    import nav from "./components/navbar.js"
+    document.querySelector("#nav").innerHTML=nav();
+  
+    import footer from "./components/footer.js"
+        document.getElementById("footer").innerHTML = footer();
     
-    price.innerText = "INR"+" "+elem.price;
-    div.append(img,name,price);
-    document.querySelector("#wproducts").append(div)
-    
-    }) 
-}
+  </script>
 
-</script>
+<script  src="./wproducts.js"></script>
+
+
