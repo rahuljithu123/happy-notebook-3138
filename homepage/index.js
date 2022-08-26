@@ -28,3 +28,8 @@ function Start() {
 function pause() {
   clearInterval(id);
 }
+// ......................................................///////////////////
+
+function men() {
+  window.location.href = "../mens.html";
+}

@@ -102,7 +102,6 @@ body {
 /* .....................................list--6 ....................................*/
 
 #main {
-  border: 1px solid red;
   width: 70%;
   margin: auto;
 }
@@ -162,6 +161,11 @@ body {
 #t_child3 {
   font-size: 15px;
 }
+#t_child3:hover,
+t_child3:active {
+  color: green;
+}
+
 #classic {
   position: relative;
 }
@@ -184,6 +188,10 @@ body {
 }
 #t2_child3 {
   font-size: 15px;
+}
+#t2_child3:hover,
+t2_child3:active {
+  color: green;
 }
 /* .......................................................................................................... */
 #fresh {
@@ -268,4 +276,173 @@ body {
 #t6_child2 {
   font-size: 40px;
   font-weight: 400;
+}
+/* .........................................day_4.................................................... */
+#day_4 {
+  width: 80%;
+
+  margin: auto;
+  margin-top: 3%;
+  position: relative;
+}
+#box_img {
+  width: 100%;
+}
+.innertext {
+  width: 20%;
+
+  text-align: center;
+  position: absolute;
+  left: 52%;
+  top: 30%;
+  line-height: 1;
+}
+#i1 {
+  font-size: 40px;
+}
+/* .................................................................................................... */
+
+#newArr {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+#placeholder {
+  font-weight: 400;
+}
+
+#placebutton {
+  width: 60%;
+  margin-top: 3%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#button {
+  background-color: transparent;
+  padding: 3px 8px 3px 8px;
+}
+#button:hover {
+  background-color: grey;
+  color: white;
+}
+/* ................................................................................................................ */
+
+#main_box {
+  border: 1px solid red;
+  width: 80%;
+  margin: auto;
+  background-color: rgb(221, 231, 239);
+}
+#main_box2 {
+  width: 70%;
+  margin: auto;
+}
+
+#main_box3 {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#crew_left {
+  border: 4px solid black;
+  width: 20%;
+  height: 25%;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 5%;
+  line-height: 0.3;
+  text-align: left;
+  margin-left: 5%;
+}
+.boxy {
+  margin-left: 8%;
+  padding: 2%;
+}
+#crew_right h3 {
+  width: 100%;
+  margin-top: 80%;
+  margin-right: 10%;
+}
+/* ............................................................ */
+#new {
+  width: 80%;
+  margin: auto;
+  padding: 1%;
+}
+#new_box {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+#new1_1 {
+  width: 50%;
+}
+#new1_img {
+  width: 100%;
+}
+#new1_div {
+  width: 50%;
+  font-size: 25px;
+}
+#new1_text h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+/*  */
+#new2_1 {
+  width: 50%;
+  height: 100%;
+}
+#new2_img {
+  width: 100%;
+}
+#new2_div {
+  width: 50%;
+  font-size: 25px;
+}
+/* .....................................more storeies............................................... */
+#more {
+  width: 80%;
+
+  margin: auto;
+}
+#more_stories {
+  width: 100%;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 20px;
+}
+#m_img {
+  width: 100%;
+}
+/* '''''''''''''''''''''''''''''''''''''''''''''love.................................................... */
+
+#love {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+#like {
+  border: 1px solid green;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  margin-top: 5%;
+}
+#like_img {
+  display: flex;
+  gap: 30px;
+}
+#like_img img {
+  width: 100%;
+}
+#like_img img:hover {
+  transform: scale(1.5);
 }
