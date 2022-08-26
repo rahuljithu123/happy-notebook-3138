@@ -23,8 +23,9 @@
     
 }
 #m01 img{
+    margin-top: 40px;
     width: 111%;
-    height: 100%;
+    height: 80%;
 }
 #m2 input{
     padding: 10px 20px;
@@ -84,7 +85,6 @@ btn{
     padding: 10px 30px;
     
 }
-
 .foot{
     /* border: 1px solid red; */
     width: 80%;
