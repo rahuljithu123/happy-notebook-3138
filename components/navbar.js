@@ -518,7 +518,7 @@ function navbar() {
     </div>
     <div id="rightnavRP">
         </i> <input type="search" class="nosubmit" placeholder="Search J.Crew">
-        <a href="#">Sign In</a>
+        <label for="show"> <a href="signin.html">  Sign In </a>  </label> 
         <i style="font-size:20px" class="fa">&#xf290;</i>
         
     </div>

@@ -16,7 +16,7 @@ function signupFunc(event) {
     localStorage.setItem("signupData", JSON.stringify(signupLS));
     if (userObj.Email.length > 0 && userObj.Password.length > 0) {
         alert("Signup Succesfull !")
-            // window.location.href = "#"
+        window.location.href = "signin.html"
     } else {
         alert("Fill the details")
     }
