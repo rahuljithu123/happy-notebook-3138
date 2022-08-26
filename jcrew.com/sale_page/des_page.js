@@ -1,4 +1,4 @@
-import head from "../components/exp.js";
+import head from "../components_1/exp.js";
 document.getElementById("slide").innerHTML = head();
 
 let saveProd = JSON.parse(localStorage.getItem("stored_prod")) || [];
@@ -33,12 +33,13 @@ let append_prod = (data) => {
     button.innerText = "ADD TO BAG";
 
     button.addEventListener("click", () => {
-      window.location.href = "../cart_page/cart.html";
       //localStorage.setItem('stored_prod', JSON.stringify(arr_of_product.push(el)));
-      alert("Added To Bag");
+      window.location.href = "../cart_page/cart.html";
+      alert("Added to bag");
     });
     let addToBagCont = document.getElementById("addToBagCont");
     addToBagCont.append(button);
   });
 };
 append_prod(saveProd);
+

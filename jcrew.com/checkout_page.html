@@ -5,53 +5,235 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>checkout</title>
+    <style>
+      #checkoutPage {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        justify-content: center;
+      }
+      #name {
+        display: flex;
+        gap: 20px;
+      }
+      #city {
+        display: flex;
+        gap: 8px;
+      }
+      #phone,
+      #emlAdd {
+        width: 100%;
+      }
+      #payment {
+        width: 100%;
+        background-color: rgb(76, 76, 238);
+        color: white;
+        border: 1px solid;
+      }
+      #deliveryAdd {
+        /* border: 1px solid red; */
+        width: 35%;
+        box-sizing: border-box;
+        padding: 0px 90px;
+        line-height: 55px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+      #country {
+        /* border: 1px solid rebeccapurple; */
+        height: 40px;
+        background-color: rgb(234, 230, 230);
+        padding: 0 0 10px 10px;
+        margin-top: 5px;
+      }
+      #country > p {
+        margin-top: 0px;
+      }
+      #addLine {
+        width: 100%;
+      }
+      .inputBox {
+        height: 35px;
+      }
+      #privacyStat {
+        /* border: 1px solid teal; */
+        height: 100px;
+        line-height: 20px;
+        box-sizing: border-box;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      }
+      #backToCart {
+        /* border: 1px solid rebeccapurple; */
+        box-sizing: border-box;
+        padding: 32px 40px;
+        line-height: 15px;
+        height: 460px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+      #backToCartBtn {
+        width: 100%;
+        background-color: white;
+        font-weight: bold;
+        border: 1px solid;
+      }
+      #finalSale {
+        border: 1px solid rgb(234, 230, 230);
+        font-weight: bold;
+        padding: 0 0 0 10px;
+        background-color: rgb(234, 230, 230);
+      }
+      #viewMore {
+        margin-top: 10px;
+        width: 100%;
+        color: blue;
+        border-color: blue;
+        background-color: white;
+        border: 1px solid;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <div id="checkoutPage">
-        <!-- ......... -->
+      <!-- ......... -->
       <div id="deliveryAdd">
-        <h1>Delivery Address</h1>
-        <input type="text" id="first_name" placeholder="First Name" />
-        <input type="text" id="last_name" placeholder="Last Name" />
-        <div id="country">
-          <p>*Country</p>
-          <p>India</p>
-        </div>
-        <input type="text" id="addLine1" placeholder="*Adress Line 1" />
-        <p>Start typing a street address or postcode</p>
-        <input type="text" id="AddLine2" placeholder="*Adress Line 2" />
-        <br />
-        <input type="text" id="postalCode" placeholder="*Postal Code" />
-        <br />
-        <input type="text" id="city" placeholder="*City" />
-        <br />
-        <input type="checkbox" />
-        <label for=""> Save this address for my next purchase.</label>
-        <br>
-        <input type="number" id="number" placeholder="Phone">
-        <br>
-        <input type="email" id="email" placeholder="*Email Address">
-        <br>
-        <div id="privacyStat">
-            <input type="checkbox">
-        <label for="">I have read and consent to eShopWorld processing my information in accordance with the Privacy Statement and Cookie Policy.</label>
-        </div>
-        <button id="continueToPayment">CONTINUE TO PAYMENT</button>
+        <h3>Delivery Address</h3>
+        <form action="">
+          <div id="name">
+            <input type="text" class="inputBox" placeholder="First Name" />
+            <input type="text" class="inputBox" placeholder="Last Name" />
+          </div>
+          <div id="country">
+            <p>*Country</p>
+          </div>
+          <input
+            required
+            type="text"
+            class="inputBox"
+            id="addLine"
+            placeholder="*Adress Line 1"
+          />
+          <p>Start typing a street address or postcode</p>
+          <input
+            required
+            type="text"
+            class="inputBox"
+            id="addLine"
+            placeholder="*Adress Line 2"
+          />
+          <br />
+          <div id="city">
+            <input
+              required
+              type="text"
+              class="inputBox"
+              placeholder="*Postal Code"
+            />
+            <br />
+            <input required type="text" class="inputBox" placeholder="*City" />
+          </div>
+          <br />
+          <input type="checkbox" />
+          <label for=""> Save this address for my next purchase.</label>
+          <br />
+
+          <input
+            type="number"
+            id="phone"
+            class="inputBox"
+            placeholder="Phone"
+          />
+          <br />
+          <input
+            required
+            type="email"
+            id="emlAdd"
+            class="inputBox"
+            placeholder="*Email Address"
+          />
+
+          <br />
+          <div id="privacyStat">
+            <input type="checkbox" />
+            <label for=""
+              >I have read and consent to eShopWorld processing my information
+              in accordance with the Privacy Statement and Cookie Policy.</label
+            >
+          </div>
+          <button id="payment" class="inputBox">CONTINUE TO PAYMENT</button>
+        </form>
       </div>
       <!-- ........... -->
 
       <div id="backToCart">
-          <button id="back_to_cart">BACK TO CART</button>
-          <p>9" vintage slim-straight jean in Gemma wash</p>
-          <p id="quantity">Quantity: 1</p>
-          <p id="color">Color: GEMMA WASH</p>
-          <p id="Size">Size: 25</p>
-          <p id="price"></p>
-          <div id="finalSale">
-            <p>Final Sale</p>
-          </div>
+        <a href="cart_page/cart.html">
+          <button id="backToCartBtn" class="inputBox">BACK TO CART</button></a
+        >
+        <p>9" vintage slim-straight jean in Gemma wash</p>
+        <p id="quantity">Quantity: 1</p>
+        <p id="color">Color: GEMMA WASH</p>
+        <p id="Size">Size: 25</p>
+        <div id="finalSale">
+          <p>Final Sale</p>
+        </div>
+        <button class="inputBox" id="viewMore">VIEW MORE</button>
+        <div id="Calculation">
+          <p id="items"></p>
+          <p id="delivery"></p>
+          <p id="total"></p>
+        </div>
       </div>
       <!-- ............. -->
     </div>
   </body>
 </html>
+<script>
+  let stored_prod = JSON.parse(localStorage.getItem("stored_prod")) || [];
+
+  let showPrice = (data) => {
+    document.getElementById("items").innerText = null;
+    document.getElementById("delivery").innerText = null;
+    document.getElementById("total").innerText = null;
+
+    data.forEach((el) => {
+      let price = (document.getElementById(
+        "items"
+      ).innerText = `Items:- INR ${el.price}`);
+      let delivery = (document.getElementById("delivery").innerText =
+        "Delivery:-" + " " + 1710);
+      let total = +el.price + 1710;
+      document.getElementById("total").innerText = `TOTAL:- ${total}`;
+    });
+  };
+  showPrice(stored_prod);
+  // confirm payment
+  document.getElementById("payment").addEventListener("click", (event) => {
+    event.preventDefault();
+    let address = document.getElementById("addLine");
+    let phone = document.getElementById("phone");
+    let email = document.getElementById("emlAdd");
+    if (address.value === "" && phone.value === "" && email.value === "") {
+      alert("Please fill mandatory field");
+    } else {
+      alert("Your order is confirmed ");
+      setTimeout(function () {
+        alert("Your order is being Packed");
+      }, 3000);
+
+      setTimeout(function () {
+        alert("Your order is in transit");
+      }, 8000);
+
+      setTimeout(function () {
+        alert("Your order is out for delivery");
+      }, 10000);
+
+      setTimeout(function () {
+        alert("Order delivered");
+      }, 12000);
+    }
+  });
+</script>

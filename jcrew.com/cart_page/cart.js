@@ -1,4 +1,4 @@
-import head from "../components/exp.js";
+import head from "../components_1/exp.js";
 document.getElementById("slide").innerHTML = head();
 
 let stored_prod = JSON.parse(localStorage.getItem("stored_prod")) || [];
