@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>description</title>
     <style>
-        #help{
-            text-align: center;
-        }
+      #help {
+        text-align: center;
+      }
+      #prod_cont {
+        display: flex;
+        gap: 20px;
+        /* border: 1px solid red; */
+        width: 80%;
+        margin: auto;
+      }
+      #prod_cont {
+        margin-top: 50px;
+      }
+      .img_div {
+        /* border: 1px solid teal; */
+        width: 50%;
+      }
+      .des_div {
+        /* border: 1px solid royalblue; */
+        width: 50%;
+        /* line-height: 50px; */
+      }
+      .img_div > img {
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      }
+      #ssImg{
+        width: 65%;
+      }
+      #addToBagBtn {
+        margin-left: 762px;
+        width: 280px;
+        height: 40px;
+        color: white;
+        background-color: black;
+        font-weight: bold;
+        margin-top: -40px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="slide"></div>
     <div id="prod_cont"></div>
-</body>
+    <div id="addToBagCont"></div>
+  </body>
 </html>
 <script src="des_page.js" type="module"></script>

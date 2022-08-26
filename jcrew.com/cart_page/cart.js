@@ -34,6 +34,12 @@ let append_prod = (data) => {
     let price_div = document.createElement("div");
     let price = document.createElement("h4");
     price.innerText = el.price;
+
+    let subtotal = document.getElementById('subtotal');
+    subtotal.innerText = `Item Subtotal- INR:-${el.price}`;
+    let estimated = document.getElementById('estimated');
+    estimated.innerText = `Estimated Total- INR:-${el.price}`;
+
     price_div.append(price);
 
     bag_cont.append(img_div, des_div, price_div);
