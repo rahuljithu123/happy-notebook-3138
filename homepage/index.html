@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="nav.css">
+    
   </head>
   <body onload="Start()">
+    <div id="nav_container"></div>
     <div id="main_container">
       <!--..................................... part 1................................................... -->
       <div id="container_jeans">
@@ -158,4 +162,17 @@
     </div>
   </body>
 </html>
-<script src="./index.js"></script>
+
+<script type="module">
+
+  import navbar from './components/navbar.js'; 
+  console.log('navbar:',navbar); 
+  let container = document.getElementById('nav_container'); 
+  container.innerHTML =navbar();
+
+
+</script>
+
+
+
+<script src="./index.js" ></script>

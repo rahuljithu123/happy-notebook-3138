@@ -28,3 +28,4 @@ function Start() {
 function pause() {
   clearInterval(id);
 }
+
