@@ -18,10 +18,10 @@ img.src=imgarr[counter];
 container.append(img);
 
 counter++; 
-    },3000)
+    },2000)
 }
 
-
-function pause(){
-clearInterval(id);
+document.querySelector("#im2").addEventListener("click",redirectw);
+function redirectw(){
+    window.location.href="wproducts.html";
 }
