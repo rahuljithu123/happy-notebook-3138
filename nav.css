@@ -4,19 +4,25 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background: transparent;
+}
+
 #navbarRP {
     width: 100%;
-    height: auto;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     border: 1px solid lightgrey;
     align-items: center;
     position: relative;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: white;
 }
 
-#navbarRP div img {
+#navbarRP div a img {
     width: 100px;
     height: auto;
 }
@@ -57,14 +63,14 @@
 
 .mm1RP {
     position: absolute;
-    top: 120%;
+    top: 150%;
     left: 0px;
     width: 100%;
-    height: 400px;
+    height: 340px;
     box-shadow: 0px 10px 2px 3px lightblue;
     opacity: 0;
     visibility: hidden;
-    transition: 1s;
+    transition: -1s;
     display: flex;
 }
 
@@ -73,6 +79,7 @@
     visibility: visible;
     top: 100%;
     background-color: white;
+    margin-top: 1px;
     /* background-color: lightgray; */
 }
 
@@ -94,14 +101,14 @@
 
 .mm2RP {
     position: absolute;
-    top: 120%;
+    top: 150%;
     left: 0px;
     width: 100%;
     height: 510px;
     box-shadow: 0px 10px 2px 3px lightblue;
     opacity: 0;
     visibility: hidden;
-    transition: 1s;
+    transition: -1s;
     display: flex;
 }
 
@@ -110,6 +117,7 @@
     visibility: visible;
     top: 100%;
     background-color: white;
+    margin-top: 1px;
     /* background-color: lightgray; */
 }
 
@@ -144,7 +152,72 @@
     color: black;
 }
 
-#faltu img {
-    width: 100%;
-    height: 600px;
+.mm3RP {
+    position: absolute;
+    top: 150%;
+    left: 0px;
+    width: 20%;
+    height: 200px;
+    opacity: 0;
+    background-color: white;
+    visibility: hidden;
+    transition: -1s;
+    display: flex;
+}
+
+#navleftRP>ul>li:hover .mm3RP {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    background-color: white;
+    margin-left: 27%;
+    margin-top: 1px;
+    /* background-color: lightgray; */
+}
+
+.mmitems2RP {
+    flex-basis: 80%;
+    margin: auto;
+}
+
+.mmitems2RP ul li {
+    list-style: none;
+    padding: 3px;
+}
+
+.mmitems2RP h3 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: lightpink;
+}
+
+.mmitems2RP a {
+    color: red;
+}
+
+input.nosubmit {
+    border: 1px solid #555;
+    width: 50%;
+    padding: 9px 4px 9px 40px;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}
+
+.nosubmit {
+    border: none;
+    padding: 0;
+}
+
+input[type="search"] {
+    outline: none;
+    border: 1px solid rgb(167, 167, 167);
+}
+
+#show:checked~#sicontainerRP {
+    display: block;
+}
+
+.mmitemsRP h3 a {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: lightpink;
 }
