@@ -390,7 +390,7 @@ function navbar() {
                     </div>
                 </div>
             </li>
-            <li> <a href="/homepage/index.html">Home </a>
+            <li> <a href="index.html">Home </a>
             <div class="mm1RP">
                 <div class="mmitemsRP">
                     <h3> Home </h3>
