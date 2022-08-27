@@ -2,13 +2,14 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 #container_jeans {
   width: 80%;
   margin: auto;
   height: 100%;
   position: relative;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 #jeans {
@@ -19,7 +20,7 @@ body {
 }
 #jeans_text {
   text-align: center;
-  line-height: 0.2;
+  line-height: 1.2;
   color: white;
   position: absolute;
   top: 50%;
@@ -55,7 +56,7 @@ body {
 #first {
   width: 50%;
   text-align: center;
-  line-height: 0.1;
+  line-height: 1.1;
 }
 
 #intro {
@@ -149,7 +150,7 @@ body {
   font-size: 30px;
   text-align: center;
   justify-content: center;
-  line-height: 0.3;
+  line-height: 1.3;
 }
 #t_child1 {
   font-size: 40px;
@@ -176,7 +177,7 @@ t_child3:active {
   font-size: 30px;
   text-align: center;
   justify-content: center;
-  line-height: 0.2;
+  line-height: 1.2;
 }
 #t2_child1 {
   font-size: 40px;
@@ -202,7 +203,7 @@ t2_child3:active {
   position: absolute;
   text-align: center;
   top: 0;
-  line-height: 0.3;
+  line-height: 1.3;
 }
 #t3_child1 {
   font-size: 30px;
@@ -217,7 +218,7 @@ t2_child3:active {
   top: 50%;
   text-align: center;
   color: white;
-  line-height: 0.2;
+  line-height: 1.2;
 }
 #t4_child1 {
   font-size: 40px;
@@ -238,7 +239,7 @@ t2_child3:active {
   top: 1%;
   text-align: center;
   color: white;
-  line-height: 0.1;
+  line-height: 1.2;
   color: black;
 }
 #t5_child1 {
@@ -266,7 +267,7 @@ t2_child3:active {
   top: 75%;
   text-align: center;
   color: white;
-  line-height: 0.1;
+  line-height: 1.2;
   color: black;
 }
 #t6_child1 {
@@ -304,7 +305,7 @@ t2_child3:active {
 
 #newArr {
   width: 60%;
-  margin: auto;
+  margin: 3vw auto;
   display: flex;
   justify-content: space-evenly;
 }
@@ -330,7 +331,6 @@ t2_child3:active {
 /* ................................................................................................................ */
 
 #main_box {
-  border: 1px solid red;
   width: 80%;
   margin: auto;
   background-color: rgb(221, 231, 239);
@@ -347,15 +347,16 @@ t2_child3:active {
   justify-content: space-between;
 }
 #crew_left {
-  border: 4px solid black;
   width: 20%;
-  height: 25%;
   font-size: 30px;
   text-align: center;
   margin-top: 5%;
   line-height: 0.3;
   text-align: left;
   margin-left: 5%;
+}
+#crew_left img {
+  width: 100%;
 }
 .boxy {
   margin-left: 8%;
@@ -365,6 +366,7 @@ t2_child3:active {
   width: 100%;
   margin-top: 80%;
   margin-right: 10%;
+  padding: 15px;
 }
 /* ............................................................ */
 #new {
@@ -430,7 +432,6 @@ t2_child3:active {
   padding-top: 20px;
 }
 #like {
-  border: 1px solid green;
   width: 70%;
   margin: auto;
   display: flex;
@@ -445,4 +446,103 @@ t2_child3:active {
 }
 #like_img img:hover {
   transform: scale(1.5);
+}
+/* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,day_5.............................................. */
+
+#day_5 {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 964px;
+  position: relative;
+}
+
+#carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+  height: 0;
+}
+
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#prev {
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+}
+
+#next {
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+#content {
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.item {
+  width: 180px;
+  height: 300px;
+  background: green;
+}
+.item:hover {
+  opacity: 0.3;
+}
+#headline {
+  margin: auto;
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: center;
+}
+/*  /////////////////////////////////////////////////////////////////////////////////// */
+
+#need {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 3vw;
+}
+#need_1 {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+#need_1 div {
+  width: 15.5%;
+}
+#need_1 img {
+  width: 100%;
+}
+#need_1 p {
+  text-align: center;
 }
