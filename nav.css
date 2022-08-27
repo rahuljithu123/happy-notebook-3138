@@ -7,9 +7,9 @@
 body {
     background: transparent;
 }
-#logo a img{
-   width: 30px;
-    height: auto;
+#logoRP a img{
+   width: 100px;
+    height: 60px;
 }
 
 #navbarRP {
