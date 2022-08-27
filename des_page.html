@@ -5,9 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>description</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="footer.css" />
     <style>
-      #help {
-        text-align: center;
+      /* *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
+      .img_div{
+        /* border: 1px solid red; */
+        margin-top: 20px;
+      }
+      .des_div{
+        margin-top: 20px;
+        /* border: 1px solid rebeccapurple; */
       }
       #prod_cont {
         display: flex;
@@ -37,21 +53,30 @@
         width: 65%;
       }
       #addToBagBtn {
+        display: block;
+        /* border: 1px solid red; */
         margin-left: 762px;
         width: 280px;
         height: 40px;
         color: white;
         background-color: black;
         font-weight: bold;
-        margin-top: -40px;
+        /* margin-top: -40px; */
+        margin-bottom: 40px;
       }
     </style>
   </head>
   <body>
     <div id="nav_container"></div>
-    <div id="slide"></div>
     <div id="prod_cont"></div>
     <div id="addToBagCont"></div>
+    <div id="footer"></div>
   </body>
 </html>
-<script src="des_page.js" type="module"></script>
+<script src="jcrew.com/sale_page/des_page.js"></script>
+<script type="module">
+  import navbar from "./components/navbar.js";
+  document.getElementById("nav_container").innerHTML = navbar();
+  import footer from "./components/footer.js";
+  document.getElementById("footer").innerHTML = footer();
+</script>
