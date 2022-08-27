@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+      #cart_page {
+        /* border: 1px solid rebeccapurple; */
+        margin-top: 20px;
+        padding-left: 250px;
+      }
+      /* shopping bag */
+      #bag_prod {
+        display: flex;
+        gap: 40px;
+        /* justify-content: space-evenly; */
+      }
+
+      .img_div {
+        /* border: 1px solid red; */
+        margin-left: 20px;
+      }
+      .img_div > img {
+        width: 100%;
+        height: 80px;
+      }
+      #help {
+        text-align: center;
+      }
+      #shopping_bag_cont {
+        /* border: 1px solid red; */
+        width: 50%;
+        height: 160px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+      h4 {
+        text-align: center;
+        margin-top: 40px;
+        color: rgb(78, 64, 64);
+      }
+      #bag_count {
+        margin-top: 20px;
+        color: grey;
+      }
+      #shopping_bag {
+        display: flex;
+        gap: 10px;
+        margin-left: 10px;
+      }
+      #remove,
+      #saveLater {
+        border: none;
+        margin-left: 5px;
+      }
+      /* saved for later */
+      #later_cont {
+        /* border: 1px solid rebeccapurple; */
+        width: 50%;
+        height: 160px;
+        margin-top: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+      #later_count {
+        margin-top: 20px;
+        color: grey;
+      }
+      #save_for_later {
+        display: flex;
+        gap: 10px;
+        margin-left: 10px;
+      }
+      /* checkout now */
+      #checkout_now{
+        /* border: 1px solid red; */
+        width: 20%;
+        position: absolute;
+        top: 11%;
+        left: 60%;
+        height: 340px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 10px;
+        /* margin-top: 28px; */
+      }
+      #checkout_btn{
+        width: 100%;
+        height: 40px;
+        background-color: rgb(85, 85, 234);
+        color: white;
+        font-weight: bold;
+        border: none;
+      }
+      #promo{
+        height: 30px;
+      }
+      #apply{
+        height: 35px;
+        border: none;
+        background-color: black;
+        color: white;
+      }
+     #description>p{
+        color: grey;
+     }
+    </style>
+  </head>
+  <body>
+    <div id="slide"></div>
+    <div id="cart_page">
+      <div id="shopping_bag_cont">
+        <div id="shopping_bag">
+          <h3>SHOPPING BAG</h3>
+          <p id="bag_count">0</p>
+        </div>
+        <hr />
+        <div id="bag_prod"></div>
+      </div>
+      <!-- ............... -->
+      <div id="later_cont">
+        <div id="save_for_later">
+          <h3>SAVED FOR LATER</h3>
+          <p id="later_count">0</p>
+        </div>
+        <hr />
+        <h4>Your Saved for Later is empty.</h4>
+      </div>
+      <!-- ............... -->
+    </div>
+    <!-- checkout now div -->
+    <div id="checkout_now">
+      <div id="total_price">
+        <div id="subtotal">
+          <p>Item Subtotal</p>
+          <p>Estimated Total</p>
+        </div>
+       
+          <p id="subtotal"></p>
+          <p id="estimated"></p>
+     
+      </div>
+      <a href="../checkout_page.html"><button id="checkout_btn">CHECK OUT NOW</button></a>
+      <div id="description">
+        <p>By clicking ‘Check Out Now’, you will be redirected to the ESW checkout
+            page where payment will be taken and your order fulfilled by ESW,
+            J.Crew's preferred partner for international sales.</p>
+      </div>
+      <h3 id="addPromo">Add a promo</h3>
+      <input type="text" id="promo" placeholder="Promo">
+      <button id="apply">APPLY</button>
+    </div>
+    <!-- checkout now div -->
+  </body>
+</html>
+<script src="cart.js" type="module"></script>

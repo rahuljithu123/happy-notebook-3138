@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sale</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="nav.css" /> -->
+    <style>
+      #help {
+        text-align: center;
+      }
+      #sale {
+        text-align: center;
+      }
+
+      #showFilters {
+        margin-left: 15px;
+      }
+      #prod_cont {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      /* .prod{
+            border: 1px solid red;
+        } */
+      #prod_cont > .prod > img {
+        display: block;
+        margin: auto;
+        width: 95%;
+        margin-top: 40px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      }
+      p,
+      h4 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav_container"></div>
+    <div id="slide"></div>
+    <h1 id="sale">SALE</h1>
+    <select name="showFilters" id="showFilters">
+      <option value="Show Filters">Show Filters</option>
+      <option value="Filters: Price <= 1200">Filters: Price <= 1200</option>
+      <option value="Filters: Price < 1400">Filters: Price < 1400</option>
+    </select>
+    <select name="featured" id="featured">
+      <option value="Featured">Featured</option>
+      <option value="LTH">Price: Low - High</option>
+      <option value="HTL">Price: High - Low</option>
+    </select>
+    <div id="prod_cont"></div>
+  </body>
+</html>
+<script src="sale.js" type="module"></script>

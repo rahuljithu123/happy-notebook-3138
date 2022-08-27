@@ -1,0 +1,70 @@
+.foot{
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 280px;
+    gap: 40px;
+    cursor: pointer;
+}
+#footing{
+    border: 1px solid #F0F1F2;
+    width: 100%;
+    height: 600px;
+    background-color: #F0F1F2;
+
+}
+.foot div{
+    /* border: 1px solid black; */
+    margin-left: 7px;
+    margin-top: 9px;
+    color: black;
+}
+.last button{
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 10px 40px;
+    color: white;
+    border-color: black;
+    background-color: black;
+}
+.last button:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+.patent{
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: auto;
+    display: grid;
+    
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 40px;
+    gap: 30px;
+}
+.patent div{
+    /* border: 1px solid red; */
+    /* display: flex; */
+    margin-top: 150px;
+
+    
+}
+.patent div>img{
+    width: 5%;
+    
+}
+
+
+input{
+    padding: 10px 40px;
+}
+
+.social{
+    /* color: black; */
+    /* display: grid; */
+    margin-top: 90px;
+    margin-left: -30px;
+    
+}

@@ -1,0 +1,271 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#container_jeans {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  position: relative;
+  margin-top: 30px;
+}
+
+#jeans {
+  width: 100%;
+}
+#image {
+  width: 100%;
+}
+#jeans_text {
+  text-align: center;
+  line-height: 0.2;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#box_div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-underline-position: inherit;
+}
+/* ...............................sliding part......................... */
+#women_slide {
+  width: 80%;
+  height: 600px;
+  margin: 20px auto;
+  position: relative;
+}
+#right_one {
+  width: 100%;
+  height: 600px;
+  background-image: url("https://www.jcrew.com/brand_creative/homepage2022/09-Sep2/v2/2022sep_0823_hp_w_img0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  line-height: 0.5;
+  top: -2.4%;
+  display: flex;
+  align-items: center;
+}
+#first {
+  width: 50%;
+  text-align: center;
+  line-height: 0.1;
+}
+
+#intro {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+#ital {
+  width: 60%;
+  font-size: 4rem;
+
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  margin-top: 0;
+}
+#font {
+  width: 60%;
+  font-size: 80px;
+  display: flex;
+  justify-content: start;
+  float: right;
+}
+#para {
+  clear: both;
+  width: 45%;
+
+  margin: auto;
+  font-size: 18px;
+  line-height: 1;
+  margin-top: 70px;
+}
+#slideImg_container {
+  height: 600px;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 50%;
+}
+#slideImg_container img {
+  height: 100%;
+  width: 100%;
+}
+/* .....................................list--6 ....................................*/
+
+#main {
+  border: 1px solid red;
+  width: 70%;
+  margin: auto;
+}
+#list {
+  margin: auto;
+}
+
+#box1 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+#box1 img {
+  width: 100%;
+}
+#box2 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+#box2 img {
+  width: 100%;
+}
+#box3 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+#box3 img {
+  width: 100%;
+}
+#newfall {
+  position: relative;
+}
+#text1 {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  line-height: 0.3;
+}
+#t_child1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t_child2 {
+  font-size: 20px;
+}
+#t_child3 {
+  font-size: 15px;
+}
+#classic {
+  position: relative;
+}
+#text2 {
+  width: 100%;
+  position: absolute;
+  top: 75%;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  line-height: 0.2;
+}
+#t2_child1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t2_child2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t2_child3 {
+  font-size: 15px;
+}
+/* .......................................................................................................... */
+#fresh {
+  position: relative;
+}
+#text3 {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  line-height: 0.3;
+}
+#t3_child1 {
+  font-size: 30px;
+}
+/* .......... */
+#Sweater {
+  position: relative;
+}
+#text4 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  color: white;
+  line-height: 0.2;
+}
+#t4_child1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t4_child2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+/* ................................................................................................... */
+
+#pant {
+  position: relative;
+}
+#text5 {
+  width: 100%;
+  position: absolute;
+  top: 1%;
+  text-align: center;
+  color: white;
+  line-height: 0.1;
+  color: black;
+}
+#t5_child1 {
+  font-size: 20px;
+}
+#t5_child2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t5_child3 {
+  font-size: 15px;
+  font-weight: 400;
+}
+#t5_child4 {
+  font-size: 12px;
+  font-weight: bold;
+}
+/* ...................................................... */
+#ballet {
+  position: relative;
+}
+#text6 {
+  width: 100%;
+  position: absolute;
+  top: 75%;
+  text-align: center;
+  color: white;
+  line-height: 0.1;
+  color: black;
+}
+#t6_child1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+#t6_child2 {
+  font-size: 40px;
+  font-weight: 400;
+}
