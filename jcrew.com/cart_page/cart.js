@@ -1,6 +1,3 @@
-import head from "../components_1/exp.js";
-document.getElementById("slide").innerHTML = head();
-
 let stored_prod = JSON.parse(localStorage.getItem("stored_prod")) || [];
 let count = +document.getElementById("bag_count").innerText;
 
@@ -16,6 +13,7 @@ let append_prod = (data) => {
     img_div.append(img);
 
     let des_div = document.createElement("div");
+    des_div.setAttribute('id', 'des_div');
     let title = document.createElement("p");
     title.innerText = el.title;
 

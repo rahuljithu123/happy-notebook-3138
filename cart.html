@@ -5,10 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="footer.css" />
     <style>
-        *{
-            font-family: Arial, Helvetica, sans-serif;
-        }
+      /* *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
       #cart_page {
         /* border: 1px solid rebeccapurple; */
         margin-top: 20px;
@@ -24,19 +35,22 @@
       .img_div {
         /* border: 1px solid red; */
         margin-left: 20px;
+        width: 20%;
       }
       .img_div > img {
         width: 100%;
-        height: 80px;
-      }
-      #help {
-        text-align: center;
+        height: 120px;
       }
       #shopping_bag_cont {
         /* border: 1px solid red; */
         width: 50%;
         height: 160px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        margin-top: 82px;
+      }
+      #des_div{
+        /* border: 1px solid red; */
+        line-height: 60px;
       }
       h4 {
         text-align: center;
@@ -44,7 +58,7 @@
         color: rgb(78, 64, 64);
       }
       #bag_count {
-        margin-top: 20px;
+        /* margin-top: 20px; */
         color: grey;
       }
       #shopping_bag {
@@ -66,7 +80,7 @@
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       }
       #later_count {
-        margin-top: 20px;
+        /* margin-top: 20px; */
         color: grey;
       }
       #save_for_later {
@@ -75,7 +89,7 @@
         margin-left: 10px;
       }
       /* checkout now */
-      #checkout_now{
+      #checkout_now {
         /* border: 1px solid red; */
         width: 20%;
         position: absolute;
@@ -84,32 +98,37 @@
         height: 340px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         padding: 10px;
+        line-height: 30px;
         /* margin-top: 28px; */
       }
-      #checkout_btn{
+      #checkout_btn {
         width: 100%;
         height: 40px;
         background-color: rgb(85, 85, 234);
         color: white;
         font-weight: bold;
         border: none;
+        margin-top: 20px;
       }
-      #promo{
-        height: 30px;
+      #promo {
+        height: 10px;
       }
-      #apply{
-        height: 35px;
-        border: none;
+      #apply {
+        height: 33px;
         background-color: black;
         color: white;
       }
-     #description>p{
+      #description {
         color: grey;
-     }
+        /* border: 1px solid red; */
+        height: 150px;
+        line-height: 20px;
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
-    <div id="slide"></div>
+    <div id="nav_container"></div>
     <div id="cart_page">
       <div id="shopping_bag_cont">
         <div id="shopping_bag">
@@ -137,22 +156,32 @@
           <p>Item Subtotal</p>
           <p>Estimated Total</p>
         </div>
-       
-          <p id="subtotal"></p>
-          <p id="estimated"></p>
-     
+
+        <p id="subtotal"></p>
+        <p id="estimated"></p>
       </div>
-      <a href="../checkout_page.html"><button id="checkout_btn">CHECK OUT NOW</button></a>
+      <a href="checkout_page.html"
+        ><button id="checkout_btn">CHECK OUT NOW</button></a
+      >
       <div id="description">
-        <p>By clicking ‘Check Out Now’, you will be redirected to the ESW checkout
-            page where payment will be taken and your order fulfilled by ESW,
-            J.Crew's preferred partner for international sales.</p>
+        <p>
+          By clicking ‘Check Out Now’, you will be redirected to the ESW
+          checkout page where payment will be taken and your order fulfilled by
+          ESW, J.Crew's preferred partner for international sales.
+        </p>
       </div>
       <h3 id="addPromo">Add a promo</h3>
-      <input type="text" id="promo" placeholder="Promo">
+      <input type="text" id="promo" placeholder="Promo" />
       <button id="apply">APPLY</button>
     </div>
     <!-- checkout now div -->
+    <div id="footer"></div>
   </body>
 </html>
-<script src="cart.js" type="module"></script>
+<script src="jcrew.com/cart_page/cart.js"></script>
+<script type="module">
+  import navbar from "./components/navbar.js";
+  document.getElementById("nav_container").innerHTML = navbar();
+  import footer from "./components/footer.js";
+  document.getElementById("footer").innerHTML = footer();
+</script>

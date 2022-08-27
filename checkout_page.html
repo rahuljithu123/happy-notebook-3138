@@ -169,7 +169,7 @@
       <!-- ........... -->
 
       <div id="backToCart">
-        <a href="cart_page/cart.html">
+        <a href="cart.html">
           <button id="backToCartBtn" class="inputBox">BACK TO CART</button></a
         >
         <p>9" vintage slim-straight jean in Gemma wash</p>
@@ -218,22 +218,14 @@
     if (address.value === "" && phone.value === "" && email.value === "") {
       alert("Please fill mandatory field");
     } else {
-      alert("Your order is confirmed ");
+      alert("Payment is processing ");
       setTimeout(function () {
-        alert("Your order is being Packed");
-      }, 3000);
-
-      setTimeout(function () {
-        alert("Your order is in transit");
-      }, 8000);
-
-      setTimeout(function () {
-        alert("Your order is out for delivery");
-      }, 10000);
+        alert("Payment is Confirmed");
+      }, 1000);
 
       setTimeout(function () {
         alert("Order delivered");
-      }, 12000);
+      }, 1000);
     }
   });
 </script>
