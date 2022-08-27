@@ -43,7 +43,7 @@ price:9879},
 title:"Limited-edition Recess Pickleball X J.Crew paddle",
 price:9879},]
 
-
+let arr_of_product2=[];
 displayh(productDatah);
 function displayh(productDatah){
     document.querySelector("#containerh").innerHTML = "";
@@ -58,44 +58,46 @@ function displayh(productDatah){
     
     price.innerText = "INR"+" "+elem.price;
     div.append(img,name,price);
+    div.onclick = () => {
+        saveProd(elem);
+      };
     document.querySelector("#containerh").append(div)
     
     }) 
 }
 
+document.getElementById("showFilters1").addEventListener("change", () => {
+  let showFilters = document.getElementById("showFilters1").value;
+  if (showFilters === "Filters: Price < 30000") {
+    let filter_1 = productDatah.filter((el) => {
+      return el.price < 30000;
+    });
+    displayh(filter_1);
+  }
+  if (showFilters === "Filters: Price > 30000") {
+    let filter_2 = productDatah.filter((el) => {
+      return el.price>30000;
+    });
+    displayh(filter_2);
+  }
+});
+
+//SORT
+document.getElementById("featured1").addEventListener("change", () => {
+  let featured = document.getElementById("featured1").value;
+  if (featured === "LTH") {
+    let sortLTH = productDatah.sort((a, b) => {
+      return a.price - b.price;
+    });
+    displayh(sortLTH);
+  }
+  if (featured === "HTL") {
+    let sortHTL = productDatah.sort((a, b) => {
+      return b.price - a.price;
+    });
+    displayh(sortHTL);
+  }
+});
+
 
    
-document.querySelector("#featured").addEventListener("change", function(){
-    filterit(document.querySelector("#featured").value,productDatah)
-})
-
-
-function filterit(getvalue,productDatah){
-    if(getvalue=="Featured"){
-        
-    }
-   if(getvalue=="LH"){
-        filterbyLH(productDatah)
-    }else if(getvalue=="HL"){
-        filterbyHL(productDatah)
-    }
-}
-
-
-function filterbyLH(productDatah){
-    let filter = productDatah.sort(function(a,b){
-        return a.price - b.price
-    })
-    displayh(filter)
-
-    
-}
-
-function filterbyHL(productDatah){
-    let filter = productDatah.sort(function(a,b){
-        return b.price - a.price
-    })
-    displayh(filter)
-
-
-}

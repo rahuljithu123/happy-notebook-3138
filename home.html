@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
     <title>Document</title>
 </head>
 <style>
@@ -12,24 +14,45 @@
         justify-content: center;
         grid-template-columns: repeat(3,350px);
         row-gap: 20px;
+        margin-top: 50px;
     }
     #containerh>div{
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         width:300px;
         margin-left: 20px;
+        margin-bottom: 20px;
     }
     #containerh>div>img{
         height:300px;
         width:300px;
     }
+    #showFilters1{
+          margin-top: 90px;
+          margin-left: 250px;
+        }
 </style>
 <body>
-    <select name="featured" id="featured">
+    <div id="nav"></div>
+    <select name="showFilters" id="showFilters1">
+        <option value="Show Filters">Show Filters</option>
+        <option value="Filters: Price < 30000">Filters: Price < 30000</option>
+        <option value="Filters: Price > 30000">Filters: Price > 30000</option>
+      </select>
+      <select name="featured" id="featured1">
         <option value="Featured">Featured</option>
-               <option value="LH">Price: Low-High</option>
-        <option value="HL">Price: High-Low  </option>
-    </select>
+        <option value="LTH">Price: Low - High</option>
+        <option value="HTL">Price: High - Low</option>
+      </select>
     <div id="containerh"></div>
+    <div id="footer"></div>
 </body>
 </html>
+<script type="module">
+    import nav from "./components/navbar.js"
+    document.querySelector("#nav").innerHTML=nav();
+  
+    import footer from "./components/footer.js"
+        document.getElementById("footer").innerHTML = footer();
+    
+  </script>
 <script src="./home.js"></script>
