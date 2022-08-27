@@ -1,6 +1,3 @@
-import head from "../components_1/exp.js";
-document.getElementById("slide").innerHTML = head();
-
 let saveProd = JSON.parse(localStorage.getItem("stored_prod")) || [];
 
 let arr_of_product = [];
@@ -23,7 +20,7 @@ let append_prod = (data) => {
     price.innerText = `INR ${el.price}`;
     let ssImg = document.createElement("img");
     ssImg.setAttribute("id", "ssImg");
-    ssImg.src = "mushtaq.png";
+    ssImg.src = "jcrew.com/sale_page/mushtaq.png";
 
     des_div.append(title, price, ssImg);
     prod_cont.append(img_div, des_div);
@@ -34,7 +31,7 @@ let append_prod = (data) => {
 
     button.addEventListener("click", () => {
       //localStorage.setItem('stored_prod', JSON.stringify(arr_of_product.push(el)));
-      window.location.href = "../cart_page/cart.html";
+      window.location.href = "cart.html";
       alert("Added to bag");
     });
     let addToBagCont = document.getElementById("addToBagCont");

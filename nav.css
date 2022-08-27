@@ -7,6 +7,10 @@
 body {
     background: transparent;
 }
+#logoRP a img{
+   width: 30px;
+    height: auto;
+}
 
 #navbarRP {
     width: 100%;

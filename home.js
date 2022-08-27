@@ -66,6 +66,13 @@ function displayh(productDatah){
     }) 
 }
 
+let saveProd = (data) => {
+  arr_of_product2.push(data);
+  localStorage.setItem("stored_prod", JSON.stringify(arr_of_product2));
+  window.location.href = "des_page.html";
+};
+
+
 document.getElementById("showFilters1").addEventListener("change", () => {
   let showFilters = document.getElementById("showFilters1").value;
   if (showFilters === "Filters: Price < 30000") {
