@@ -1,24 +1,22 @@
 #box1{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: 80%;
     height: auto;
     margin: auto;
     
 }
-#box10{
-    /* border: 1px solid black; */
-    width: 100%;
+#box100{
+    border: 1px solid black;
+    width: 150%;
     height: auto;
     
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 100%;
     grid-template-rows: 700px;
 }
-#box10 div{
-    /* border: 1px solid red; */
-}
+    
 #box111{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     margin-top: 40px;
 }
 .box1111{
@@ -173,4 +171,29 @@ color: #009849;
 }
 .block p:nth-child(3){
     color: red;
+}
+#kids{
+    text-align: center;
+    font: 36px freight-big-pro, serif;
+    line-height: 10px;
+    
+}
+#kids h3{
+    font-size: 40px;
+    margin-top: 10px;
+}
+#kids p{
+    font-size: 26px;
+   
+}
+#kids1{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    
+    margin: auto;
+    margin-top: 30px;
+}
+#kids1 img{
+    width: 100%;
 }

@@ -1,0 +1,90 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#sicontainerRP {
+    width: 27%;
+    margin: auto;
+    height: 500px;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 100px;
+    /* display: none; */
+}
+
+
+/* #show:checked~#sicontainerRP {
+    display: block;
+}
+
+#sicontainerRP .close-btn {
+    right: 20px;
+    margin-left: 95%;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+#sicontainerRP .close-btn:hover {
+    color: #3498db;
+} */
+
+#formRP {
+    width: 90%;
+    margin: auto;
+}
+
+form h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 10px;
+    resize: vertical;
+}
+
+#sicheckboxRP {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#siparaRP p {
+    color: #878787;
+    font-size: 14px;
+    padding: 3px;
+    margin: 20px 0px;
+}
+
+#teRP {
+    margin: 10px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#teRP label a {
+    color: #0087fe;
+    text-decoration: none;
+}
+
+
+/* #show {
+    margin-top: 100px;
+} */

@@ -1,4 +1,4 @@
-import head from "../components/exp.js";
+import head from "../components_1/exp.js";
 document.getElementById("slide").innerHTML = head();
 
 let arr_of_prod = [
@@ -9,6 +9,7 @@ let arr_of_prod = [
   },
   {
     img: "https://www.jcrew.com/s7-img-facade/BF521_DM6042?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=309&hei=309",
+
     title: "vintage slim-straight jean in Gemma wash",
     price: "2300",
   },
@@ -87,45 +88,62 @@ let append_prod = (data) => {
   data.forEach((el) => {
     let img = document.createElement("img");
     img.src = el.img;
+
     let title = document.createElement("p");
-    //title.setAttribute("id", title);
+
     title.innerText = el.title;
 
     let price = document.createElement("h4");
-    //price.setAttribute("id", "price");
+
     price.innerText = `INR ${el.price}`;
     let box = document.createElement("div");
+    box.setAttribute("class", "prod");
+    box.append(img, title, price);
 
     box.onclick = () => {
       saveProd(el);
     };
 
-    box.setAttribute("class", "prod");
-    box.append(img, title, price);
     prod_cont.append(box);
   });
 };
 let saveProd = (data) => {
-  console.log("data:", data);
   arr_of_product.push(data);
-  console.log("arr_of_product:", arr_of_product);
   localStorage.setItem("stored_prod", JSON.stringify(arr_of_product));
   window.location.href = "des_page.html";
 };
 append_prod(arr_of_prod);
 
 //FILTER
-document.getElementById("filter").addEventListener("click", () => {
-  let filter = arr_of_prod.filter((el) => {
-    return el.price < 2000;
-  });
-  append_prod(filter);
+document.getElementById("showFilters").addEventListener("change", () => {
+  let showFilters = document.getElementById("showFilters").value;
+  if (showFilters === "Filters: Price <= 1200") {
+    let filter_1 = arr_of_prod.filter((el) => {
+      return el.price <= 1200;
+    });
+    append_prod(filter_1);
+  }
+  if (showFilters === "Filters: Price < 1400") {
+    let filter_2 = arr_of_prod.filter((el) => {
+      return el.price < 1400;
+    });
+    append_prod(filter_2);
+  }
 });
 
 //SORT
-document.getElementById("sort").addEventListener("click", () => {
-  let sort_price = arr_of_prod.sort((a, b) => {
-    return a.price - b.price;
-  });
-  append_prod(sort_price);
+document.getElementById("featured").addEventListener("change", () => {
+  let featured = document.getElementById("featured").value;
+  if (featured === "LTH") {
+    let sortLTH = arr_of_prod.sort((a, b) => {
+      return a.price - b.price;
+    });
+    append_prod(sortLTH);
+  }
+  if (featured === "HTL") {
+    let sortHTL = arr_of_prod.sort((a, b) => {
+      return b.price - a.price;
+    });
+    append_prod(sortHTL);
+  }
 });

@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
     <title>Document</title>
     <style>
 #women1{
     display:flex;
     justify-content: center;
+    margin-top: 70px;
 }
+
 #first{
     border:1px soild red;
     height:680px;
@@ -19,6 +23,7 @@
     background-position: center;
     text-align: center;
     color: white;
+    
 }
 .introd{
     font-size: 30px;
@@ -79,6 +84,7 @@
     </style>
 </head>
 <body onload="start()">
+    <div id="nav"></div>
  <div id="women1">
     <div id="first">
        <p class="introd">Introducing</p>
@@ -91,24 +97,24 @@
  <div id="women2">
     <h2>Recommended for Y-O-U</h2>
      <div id="women2images">
-        <div class="im"><img src="https://www.jcrew.com/s7-img-facade/J6339_NA7183?wid=376" alt="img"/></div>
-        <div class="im"><img src="https://www.jcrew.com/s7-img-facade/K5961_BL8133?wid=376" alt="img"/></div>
-        <div class="im"><img src="https://www.jcrew.com/s7-img-facade/BA938_GR8247?wid=376" alt="img"/></div>
-        <div class="im"><img src="https://www.jcrew.com/s7-img-facade/G8547_BL8133?wid=376" alt="img"/></div>
-        <div class="im"><img src="https://www.jcrew.com/s7-img-facade/BA188_EE0273?wid=376" alt="img"/></div>
-        <div class="im"><img src="https://www.jcrew.com/s7-img-facade/BL051_PT2251?wid=376" alt="img"/></div>
+        <div id="im1"><img src="https://www.jcrew.com/s7-img-facade/J6339_NA7183?wid=376" alt="img"/></div>
+        <div id="im1"><img src="https://www.jcrew.com/s7-img-facade/K5961_BL8133?wid=376" alt="img"/></div>
+        <div id="im1"><img src="https://www.jcrew.com/s7-img-facade/BA938_GR8247?wid=376" alt="img"/></div>
+        <div id="im1"><img src="https://www.jcrew.com/s7-img-facade/G8547_BL8133?wid=376" alt="img"/></div>
+        <div id="im1"><img src="https://www.jcrew.com/s7-img-facade/BA188_EE0273?wid=376" alt="img"/></div>
+        <div id="im1"><img src="https://www.jcrew.com/s7-img-facade/BL051_PT2251?wid=376" alt="img"/></div>
      </div>
      </div>
      <div id="women3">
         <h2>Shops, stories & more</h2>
      <div id="women3images">
-        <div class="im"><img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/v2/2022sep_0823_flyout_w_img0.jpg" alt="img"/>
+        <div id="im2"><img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/v2/2022sep_0823_flyout_w_img0.jpg" alt="img"/>
         <h4> Introducing Italian city wool</h4></div>
-        <div class="im"><img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/v2/2022sep_0823_flyout_w_img1.jpg" alt="img"/>
+        <div id="im2"><img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/v2/2022sep_0823_flyout_w_img1.jpg" alt="img"/>
         <h4> New fall arrivals</h4></div>
-        <div class="im"><img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/v2/2022sep_0823_flyout_w_img2.jpg" alt="img"/>
+        <div id="im2"><img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/v2/2022sep_0823_flyout_w_img2.jpg" alt="img"/>
         <h4> Fresh cashmere shades</h4></div>
-        <div class="im"><img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/v2/2022sep_0823_flyout_w_img3.jpg" alt="img"/>
+        <div id="im2"><img src="https://www.jcrew.com/brand_creative/2022/202209-Sep/flyout/v2/2022sep_0823_flyout_w_img3.jpg" alt="img"/>
         <h4> Lightweight, luxe merino wool</h4></div>
      </div>
      </div>
@@ -117,21 +123,31 @@
      <div id="women4">
         <h2>More you need to see</h2>
          <div id="women4images">
-            <div class="im"><img src="https://www.jcrew.com/s7-img-facade/BK961_GR7805_m?wid=416" alt="img"/>
+            <div id="im3"><img src="https://www.jcrew.com/s7-img-facade/BK961_GR7805_m?wid=416" alt="img"/>
             <h5>Shop Women's Dresses & Jumpsuits</h5></div>
-            <div class="im"><img src="https://www.jcrew.com/s7-img-facade/BL084_PT0317_m?wid=416" alt="img"/>
+            <div id="im3"><img src="https://www.jcrew.com/s7-img-facade/BL084_PT0317_m?wid=416" alt="img"/>
                 <h5>Shop Women's Shirts & Tops</h5></div>
-            <div class="im"><img src="https://www.jcrew.com/s7-img-facade/BJ571_NA6157_m?wid=416" alt="img"/>
+            <div id="im3"><img src="https://www.jcrew.com/s7-img-facade/BJ571_NA6157_m?wid=416" alt="img"/>
                 <h5>Shop Women's Sweaters</h5></div>
-            <div class="im"><img src="https://www.jcrew.com/s7-img-facade/BJ987_BL7755_m?wid=416" alt="img"/>
+            <div id="im3"><img src="https://www.jcrew.com/s7-img-facade/BJ987_BL7755_m?wid=416" alt="img"/>
                 <h5>Shop Women's Blazers</h5></div>
-            <div class="im"><img src="https://www.jcrew.com/s7-img-facade/BK251_BK0001_m?wid=416" alt="img"/>
+            <div id="im3"><img src="https://www.jcrew.com/s7-img-facade/BK251_BK0001_m?wid=416" alt="img"/>
                 <h5>Shop Women's Pants</h5></div>
-            <div class="im"><img src="https://www.jcrew.com/s7-img-facade/BK656_DM6650_m?wid=416" alt="img"/>
+            <div id="im3"><img src="https://www.jcrew.com/s7-img-facade/BK656_DM6650_m?wid=416" alt="img"/>
                 <h5>Shop Women's Denim</h5></div>
          </div>
          </div>
- 
+ <div id="footer"></div>
 </body>
 </html>
+
+<script type="module">
+    import nav from "./components/navbar.js"
+    document.querySelector("#nav").innerHTML=nav();
+  
+    import footer from "./components/footer.js"
+        document.getElementById("footer").innerHTML = footer();
+    
+  </script>
+
 <script src="./women.js"></script>

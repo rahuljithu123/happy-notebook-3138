@@ -1,3 +1,4 @@
+
 let btn2 = document.querySelector("form");
 
 let signupLS = JSON.parse(localStorage.getItem("signupData")) || [];
@@ -6,6 +7,17 @@ btn2.addEventListener("click", signupFunc)
 
 function signupFunc(event) {
     event.preventDefault();
+
+let form = document.querySelector("form");
+
+let signupLS = JSON.parse(localStorage.getItem("signupData")) || [];
+
+
+
+function signupFunc(event) {
+    event.preventDefault();
+    console.log("working")
+
     let userObj = {
             Email: document.querySelector("#emailRP").value,
             Password: document.querySelector("#passwordRP").value,
