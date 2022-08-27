@@ -163,14 +163,16 @@ let kidsdata = [
   ];
   
   
+ 
   
-  let cart = JSON.parse(localStorage.getItem("cartData")) || [];
-  // appenddata(kidsdata)
-  let m5_div = document.querySelector("#m5");
-  function appenddata(kidsdata) {
-    kidsdata.forEach((elem) => {
+  let kids_data = JSON.parse(localStorage.getItem("stored_prod"))||[];
+  function appenddata(data) {
+    let m5_div = document.querySelector("#m5");
+    m5_div.innerHTML=null;
+    data.forEach((elem) => {
   
       let div=document.createElement("div");
+      div.setAttribute("class", "prod");
       
       let image = document.createElement("img");
       image.src = elem.imageUrl;
@@ -185,28 +187,7 @@ let kidsdata = [
       let productID = document.createElement("h3");
       productID.innerText = elem.productID;
   
-      let btn=document.createElement("button")
-      btn.innerText="Add To Cart";
-      btn.style.color="grey"
-      btn.style.backgroundColor="black";
-      btn.addEventListener('click',function(){
-          console.log("ankit")
-          if(check_cart()){
-              alert("Already Added To Cart")
-          }else{
-              cart.push(elem);
-              localStorage.setItem("cartdata",JSON.stringify(cart));
-              window.location.href="cart.html";
-          };
-      });
-      function check_cart(){
-          for(let i=0;i<cart.length;i++){
-              if(cart[i].productID==elem.productID){
-                  return true;
-              }
-          }
-          return false;
-      }
+  
   
       div.addEventListener("mouseover", mouseOn);
       function mouseOn() {
@@ -223,40 +204,61 @@ let kidsdata = [
   
       function redirect() {
         localStorage.setItem("desciption", JSON.stringify(elem));
-        window.location.href = "kids.html";
+        window.location.href = "mens.html";
       }
       
   
-      div.append(image, title, price, productID,btn);
-      m5_div.append(div)
-    });
-  }
+      div.append(image, title, price, productID);
+      
   
+      div.onclick=()=>{
+        saveProd(elem);
+      };
+      m5_div.append(div);
+    });
+  };
   appenddata(kidsdata);
+  let saveProd=(data)=>{
+    kids_data.push(data);
+    localStorage.setItem("stored_prod",JSON.stringify(kids_data));
+    window.location.href="./jcrew.com/sale_page/des_page.html"
+  };
   
   
-  // let sortIt=document.getElementById("featured").value;
-  document.getElementById("featured").addEventListener("change",sorted);
   
-  function sorted(getvalue,kidsdata){
-      if (getvalue == "LH") {
-        sortbyLH(kidsdata);
-      } else if (getvalue == "HL") {
-        sortbyHL(kidsdata);
-      }
+  
+  
+  //FILTER
+  document.getElementById("creature").addEventListener("change", () => {
+    let creature = document.getElementById("creature").value;
+    if (creature === "Filters: Price <= 90") {
+      let filter_1 =kidsdata.filter((el) => {
+        return el.price <= 90;
+      });
+      appenddata(filter_1);
     }
+    if (creature === "Filters: Price < 100") {
+      let filter_2 = kidsdata.filter((el) => {
+        return el.price < 100;
+      });
+      appenddata(filter_2);
+    }
+  });
   
-    function sortbyLH(kidsdata) {
-    let sort = kidsdata.sort(function (a, b) {
-      return a.price - b.price;
-    });
-    appenddata(sort);
-    console.log(sort);
-  }
-  function sortbyHL(kidsdata) {
-    let sort = kidsdata.sort(function (a, b) {
-      return b.price - a.price;
-    });
-    appenddata(sort);
-    console.log(sort);
-  }
+  //SORT
+  document.getElementById("featured").addEventListener("change", () => {
+    let featured = document.getElementById("featured").value;
+    if (featured === "LH") {
+      let sortLH = kidsdata.sort((a, b) => {
+        return a.price - b.price;
+      });
+      appenddata(sortLH);
+    }
+    if (featured === "HL") {
+      let sortHL = kidsdata.sort((a, b) => {
+        return b.price - a.price;
+      });
+      appenddata(sortHL);
+    }
+  });
+  

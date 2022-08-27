@@ -6,20 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="kidsmens.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
 <body>
+    <div id="for_navbar"></div>
     <div id="m1">
         <div id="m2">
           <div id="m01">
             <img src="https://www.jcrew.com/brand_creative/homepage2022/07-Jul3/0714-0725_CC_HP_Desktop_Promo-Top_DT_EDIT_RTbackground.jpg" alt="error">
           </div>
+          <!-- <div id="jeans_text">
+            <p>This sale is jean-ius</p>
+            <h1>Women's & Men's denim, just $75</h1>
+            <p>prices as marked</p>
+            <!-- <div id="box_div">
+              <u><p>Shop Women</p></u>
+              <u><p>Shop Men</p></u>
+            </div> -->
+          <!-- </div> -->
           <div>
-            
+            <!-- FILTERS -->
+          <select name="showFilters" id="creature">
+            <option value="Show Filters">Show Filters</option>
+            <option value="Filters: Price <=90">Filters: Price <= 90</option>
+            <option value="Filters: Price < 100">Filters: Price < 100</option>
+          </select>
             <select name="featured" id="featured">
                 <option value="Featured">Sort by</option>
                 <option value="LH">Price, Low to High</option>
                 <option value="HL">Price, High to Low  </option>
             </select>
+            
         </div>
         </div>
         <div id="m3">
@@ -209,5 +226,13 @@
     </div>
 </body>
 </html>
-
+<script type="module">
+    import navbar from './components/navbar.js'
+    console.log(navbar)
+  
+    //append
+    let for_navbar=document.getElementById("for_navbar");
+    for_navbar.innerHTML=navbar(); 
+  
+  </script>
 <script src="kidsmens.js"></script>
