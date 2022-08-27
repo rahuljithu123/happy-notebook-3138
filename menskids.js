@@ -1,3 +1,7 @@
+// import head from "../components/exp.js";
+// document.getElementById("slide").innerHTML = head();
+
+
 let mensdata = [
   {
     imageUrl:
@@ -163,14 +167,14 @@ let mensdata = [
 ];
 
 
-
-let cart = JSON.parse(localStorage.getItem("cartData")) || [];
-// appenddata(mensdata)
-let m5_div = document.querySelector("#m5");
-function appenddata(mensdata) {
-  mensdata.forEach((elem) => {
+let mens_data = JSON.parse(localStorage.getItem("stored_prod"))||[];
+function appenddata(data) {
+  let m5_div = document.querySelector("#m5");
+  m5_div.innerHTML=null;
+  data.forEach((elem) => {
 
     let div=document.createElement("div");
+    div.setAttribute("class", "prod");
     
     let image = document.createElement("img");
     image.src = elem.imageUrl;
@@ -185,28 +189,7 @@ function appenddata(mensdata) {
     let productID = document.createElement("h3");
     productID.innerText = elem.productID;
 
-    let btn=document.createElement("button")
-    btn.innerText="Add To Cart";
-    btn.style.color="grey"
-    btn.style.backgroundColor="black";
-    btn.addEventListener('click',function(){
-        console.log("ankit")
-        if(check_cart()){
-            alert("Already Added To Cart")
-        }else{
-            cart.push(elem);
-            localStorage.setItem("cartdata",JSON.stringify(cart));
-            window.location.href="cart.html";
-        };
-    });
-    function check_cart(){
-        for(let i=0;i<cart.length;i++){
-            if(cart[i].productID==elem.productID){
-                return true;
-            }
-        }
-        return false;
-    }
+
 
     div.addEventListener("mouseover", mouseOn);
     function mouseOn() {
@@ -227,36 +210,112 @@ function appenddata(mensdata) {
     }
     
 
-    div.append(image, title, price, productID,btn);
-    m5_div.append(div)
-  });
-}
+    div.append(image, title, price, productID);
+    
 
+    div.onclick=()=>{
+      saveProd(elem);
+    };
+    m5_div.append(div);
+  });
+};
 appenddata(mensdata);
+let saveProd=(data)=>{
+  mens_data.push(data);
+  localStorage.setItem("stored_prod",JSON.stringify(mens_data));
+  window.location.href="des_page.html"
+};
 
 
-// let sortIt=document.getElementById("featured").value;
-document.getElementById("featured").addEventListener("change",sorted);
 
-function sorted(getvalue,mensdata){
-    if (getvalue == "LH") {
-      sortbyLH(mensdata);
-    } else if (getvalue == "HL") {
-      sortbyHL(mensdata);
-    }
+
+
+//FILTER
+document.getElementById("creature").addEventListener("change", () => {
+  let creature = document.getElementById("creature").value;
+  if (creature === "Filters: Price <= 90") {
+    let filter_1 = mensdata.filter((el) => {
+      return el.price <= 90;
+    });
+    appenddata(filter_1);
   }
+  if (creature === "Filters: Price < 100") {
+    let filter_2 = mensdata.filter((el) => {
+      return el.price < 100;
+    });
+    appenddata(filter_2);
+  }
+});
 
-  function sortbyLH(mensdata) {
-  let sort = mensdata.sort(function (a, b) {
-    return a.price - b.price;
-  });
-  appenddata(sort);
-  console.log(sort);
-}
-function sortbyHL(mensdata) {
-  let sort = mensdata.sort(function (a, b) {
-    return b.price - a.price;
-  });
-  appenddata(sort);
-  console.log(sort);
-}
+//SORT
+document.getElementById("featured").addEventListener("change", () => {
+  let featured = document.getElementById("featured").value;
+  if (featured === "LH") {
+    let sortLH = mensdata.sort((a, b) => {
+      return a.price - b.price;
+    });
+    appenddata(sortLH);
+  }
+  if (featured === "HL") {
+    let sortHL = mensdata.sort((a, b) => {
+      return b.price - a.price;
+    });
+    appenddata(sortHL);
+  }
+});
+
+
+
+
+
+
+
+
+// // let sortIt=document.getElementById("featured").value;
+// document.getElementById("featured").addEventListener("change",sorted);
+
+// function sorted(getvalue,mensdata){
+//     if (getvalue == "LH") {
+//       sortbyLH(mensdata);
+//     } else if (getvalue == "HL") {
+//       sortbyHL(mensdata);
+//     }
+//   }
+
+//   function sortbyLH(mensdata) {
+//   let sort = mensdata.sort(function (a, b) {
+//     return a.price - b.price;
+//   });
+//   appenddata(sort);
+//   console.log(sort);
+// }
+// function sortbyHL(mensdata) {
+//   let sort = mensdata.sort(function (a, b) {
+//     return b.price - a.price;
+//   });
+//   appenddata(sort);
+//   console.log(sort);
+// }
+    // let btn=document.createElement("button")
+    // btn.innerText="Add To Cart";
+    // btn.style.color="grey"
+    // btn.style.backgroundColor="black";
+
+    // btn.addEventListener('click',function(){
+    //     console.log("ankit")
+    //     if(check_cart()){
+    //         alert("Already Added To Cart")
+    //     }else{
+    //         cart.push(elem);
+    //         localStorage.setItem("cartdata",JSON.stringify(cart));
+    //         window.location.href="cart.html";
+    //     };
+    // });
+    // function check_cart(){
+    //     for(let i=0;i<cart.length;i++){
+    //         if(cart[i].productID==elem.productID){
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
