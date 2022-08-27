@@ -1,6 +1,8 @@
 import head from "../components_1/exp.js";
 document.getElementById("slide").innerHTML = head();
 
+
+
 let arr_of_prod = [
   {
     img: "https://www.jcrew.com/s7-img-facade/BJ596_NA6157?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=309&hei=309",

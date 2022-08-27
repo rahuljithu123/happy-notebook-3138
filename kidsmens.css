@@ -15,6 +15,7 @@
     /* border: 1px solid black; */
     width: 100%;
     height: 500px;
+    /* position: fixed; */
 }
 #m2 div{
     /* border: 1 px solid blue; */
@@ -23,13 +24,37 @@
     
 }
 #m01 img{
-    margin-top: 40px;
+    margin-top: 60px;
     width: 111%;
     height: 80%;
 }
 #m2 input{
     padding: 10px 20px;
+
 }
+#jeans_text {
+    text-align: center;
+    line-height: 0.2;
+    color: #E16A3D;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+   #jeans_text p{
+    margin-top: 20px;
+   }
+   #jeans_text h1{
+    margin-top: 30px;
+   }
+  #box_div {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 10px;
+    text-underline-position: inherit;
+    margin-top: 80px;
+  }
 #m3{
     /* border: 1px solid red; */
     width: 100%;
@@ -159,3 +184,4 @@ input{
 .footer p{
     margin-top: 10px;
 }
+
