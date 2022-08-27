@@ -471,7 +471,7 @@ function navbar() {
                 </div>
             </div>
             </li>
-            <li> <a href="#">Sale </a>
+            <li> <a href="../jcrew.com/sale_page/sale.html">Sale </a>
                 <div class="mm1RP">
                     <div class="mmitemsRP">
                         <h3> Sale</h3>
@@ -519,7 +519,7 @@ function navbar() {
     <div id="rightnavRP">
         </i> <input type="search" class="nosubmit" placeholder="Search J.Crew">
         <label for="show"> <a href="signin.html">  Sign In </a>  </label> 
-        <i style="font-size:20px" class="fa">&#xf290;</i>
+       <a href="../jcrew.com/cart_page/cart.html">  <i style="font-size:20px" class="fa">&#xf290;</i></a> 
         
     </div>
 </div>`;
