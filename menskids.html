@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>J.CREW</title>
     <link rel="stylesheet" href="menskids.css" />
+    <link rel="stylesheet" href="nav.css">
   </head>
 
   <body>
+    <div id="for_navbar"></div>
     <div id="m1">
       <div id="m2">
         <div id="m01">
           <img src="https://www.jcrew.com/brand_creative/2022/202208-Aug/m_sweats/v2/2022aug_0726_m_sweats_img0.jpg" alt="error">
         </div>
         <div>
-          
+          <!-- */..................................................................... -->
+
+          <!-- FILTERS -->
+          <select name="showFilters" id="creature">
+            <option value="Show Filters">Show Filters</option>
+            <option value="Filters: Price <=90">Filters: Price <= 90</option>
+            <option value="Filters: Price < 100">Filters: Price < 100</option>
+          </select>
+          <!-- SORT -->
           <select name="featured" id="featured">
               <option value="Featured">Sort by</option>
               <option value="LH">Price, Low to High</option>
@@ -211,6 +221,15 @@
   </body>
 </html>
 
+<script type="module">
+  import navbar from './components/navbar.js'
+  console.log(navbar)
+
+  //append
+  let for_navbar=document.getElementById("for_navbar");
+  for_navbar.innerHTML=navbar(); 
+
+</script>
 <script src="menskids.js">
   
 </script>
