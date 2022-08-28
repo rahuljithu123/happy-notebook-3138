@@ -1,0 +1,548 @@
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#container_jeans {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  position: relative;
+  margin-top: 80px;
+}
+
+#jeans {
+  width: 100%;
+}
+#image {
+  width: 100%;
+}
+#jeans_text {
+  text-align: center;
+  line-height: 1.2;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#box_div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-underline-position: inherit;
+}
+/* ...............................sliding part......................... */
+#women_slide {
+  width: 80%;
+  height: 600px;
+  margin: 20px auto;
+  position: relative;
+}
+#right_one {
+  width: 100%;
+  height: 600px;
+  background-image: url("https://www.jcrew.com/brand_creative/homepage2022/09-Sep2/v2/2022sep_0823_hp_w_img0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  line-height: 0.5;
+  top: -2.4%;
+  display: flex;
+  align-items: center;
+}
+#first {
+  width: 50%;
+  text-align: center;
+  line-height: 1.1;
+}
+
+#intro {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+#ital {
+  width: 60%;
+  font-size: 4rem;
+
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  margin-top: 0;
+}
+#font {
+  width: 60%;
+  font-size: 80px;
+  display: flex;
+  justify-content: start;
+  float: right;
+}
+#para {
+  clear: both;
+  width: 45%;
+
+  margin: auto;
+  font-size: 18px;
+  line-height: 1;
+  margin-top: 70px;
+}
+#slideImg_container {
+  height: 600px;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 50%;
+}
+#slideImg_container img {
+  height: 100%;
+  width: 100%;
+}
+/* .....................................list--6 ....................................*/
+
+#main {
+  width: 70%;
+  margin: auto;
+}
+#list {
+  margin: auto;
+}
+
+#box1 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+#box1 img {
+  width: 100%;
+}
+#box2 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+#box2 img {
+  width: 100%;
+}
+#box3 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+#box3 img {
+  width: 100%;
+}
+#newfall {
+  position: relative;
+}
+#text1 {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.3;
+}
+#t_child1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t_child2 {
+  font-size: 20px;
+}
+#t_child3 {
+  font-size: 15px;
+}
+#t_child3:hover,
+t_child3:active {
+  color: green;
+}
+
+#classic {
+  position: relative;
+}
+#text2 {
+  width: 100%;
+  position: absolute;
+  top: 75%;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+#t2_child1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t2_child2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t2_child3 {
+  font-size: 15px;
+}
+#t2_child3:hover,
+t2_child3:active {
+  color: green;
+}
+/* .......................................................................................................... */
+#fresh {
+  position: relative;
+}
+#text3 {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  line-height: 1.3;
+}
+#t3_child1 {
+  font-size: 30px;
+}
+/* .......... */
+#Sweater {
+  position: relative;
+}
+#text4 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  color: white;
+  line-height: 1.2;
+}
+#t4_child1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t4_child2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+/* ................................................................................................... */
+
+#pant {
+  position: relative;
+}
+#text5 {
+  width: 100%;
+  position: absolute;
+  top: 1%;
+  text-align: center;
+  color: white;
+  line-height: 1.2;
+  color: black;
+}
+#t5_child1 {
+  font-size: 20px;
+}
+#t5_child2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+#t5_child3 {
+  font-size: 15px;
+  font-weight: 400;
+}
+#t5_child4 {
+  font-size: 12px;
+  font-weight: bold;
+}
+/* ...................................................... */
+#ballet {
+  position: relative;
+}
+#text6 {
+  width: 100%;
+  position: absolute;
+  top: 75%;
+  text-align: center;
+  color: white;
+  line-height: 1.2;
+  color: black;
+}
+#t6_child1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+#t6_child2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+/* .........................................day_4.................................................... */
+#day_4 {
+  width: 80%;
+
+  margin: auto;
+  margin-top: 3%;
+  position: relative;
+}
+#box_img {
+  width: 100%;
+}
+.innertext {
+  width: 20%;
+
+  text-align: center;
+  position: absolute;
+  left: 52%;
+  top: 30%;
+  line-height: 1;
+}
+#i1 {
+  font-size: 40px;
+}
+/* .................................................................................................... */
+
+#newArr {
+  width: 60%;
+  margin: 3vw auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+#placeholder {
+  font-weight: 400;
+}
+
+#placebutton {
+  width: 60%;
+  margin-top: 3%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#button {
+  background-color: transparent;
+  padding: 3px 8px 3px 8px;
+}
+#button:hover {
+  background-color: grey;
+  color: white;
+}
+/* ................................................................................................................ */
+
+#main_box {
+  width: 80%;
+  margin: auto;
+  background-color: rgb(221, 231, 239);
+}
+#main_box2 {
+  width: 70%;
+  margin: auto;
+}
+
+#main_box3 {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#crew_left {
+  width: 20%;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 5%;
+  line-height: 0.3;
+  text-align: left;
+  margin-left: 5%;
+}
+#crew_left img {
+  width: 100%;
+}
+.boxy {
+  margin-left: 8%;
+  padding: 2%;
+}
+#crew_right h3 {
+  width: 100%;
+  margin-top: 80%;
+  margin-right: 10%;
+  padding: 15px;
+}
+/* ............................................................ */
+#new {
+  width: 80%;
+  margin: auto;
+  padding: 1%;
+}
+#new_box {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+#new1_1 {
+  width: 50%;
+}
+#new1_img {
+  width: 100%;
+}
+#new1_div {
+  width: 50%;
+  font-size: 25px;
+}
+#new1_text h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+/*  */
+#new2_1 {
+  width: 50%;
+  height: 100%;
+}
+#new2_img {
+  width: 100%;
+}
+#new2_div {
+  width: 50%;
+  font-size: 25px;
+}
+/* .....................................more storeies............................................... */
+#more {
+  width: 80%;
+
+  margin: auto;
+}
+#more_stories {
+  width: 100%;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 20px;
+}
+#m_img {
+  width: 100%;
+}
+/* '''''''''''''''''''''''''''''''''''''''''''''love.................................................... */
+
+#love {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+#like {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  margin-top: 5%;
+}
+#like_img {
+  display: flex;
+  gap: 30px;
+}
+#like_img img {
+  width: 100%;
+}
+#like_img img:hover {
+  transform: scale(1.5);
+}
+/* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,day_5.............................................. */
+
+#day_5 {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 964px;
+  position: relative;
+}
+
+#carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+  height: 0;
+}
+
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#prev {
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+}
+
+#next {
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+#content {
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.item {
+  width: 180px;
+  height: 300px;
+  background: green;
+}
+.item:hover {
+  opacity: 0.3;
+}
+#headline {
+  margin: auto;
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: center;
+}
+/*  /////////////////////////////////////////////////////////////////////////////////// */
+
+#need {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 3vw;
+}
+#need_1 {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+#need_1 div {
+  width: 15.5%;
+}
+#need_1 img {
+  width: 100%;
+}
+#need_1 p {
+  text-align: center;
+}

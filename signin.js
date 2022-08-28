@@ -12,7 +12,7 @@ function mySignIn(event) {
     if (checkSignin(data.userEmail, data.userPassword) == true) {
         localStorage.setItem("signinData", JSON.stringify(data));
         alert("sign in successful");
-        window.location.href = "./homepage/index.html";
+        window.location.href = "index.html";
     } else {
         alert("worng email or password");
     }
