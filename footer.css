@@ -8,6 +8,8 @@
     grid-template-rows: 280px;
     gap: 40px;
     cursor: pointer;
+
+    margin-top: 40px;
 }
 #footing{
     border: 1px solid #F0F1F2;
